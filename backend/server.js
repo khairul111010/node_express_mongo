@@ -10,6 +10,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.use("/api/goals", require("./routers/goalsRoute")); //GOAL ROUTE
+app.use("/api/users", require("./routers/usersRoute")); //User ROUTE
 
 app.use(errorHandler); //ERROR HANDLER MIDDLEWARE
 
