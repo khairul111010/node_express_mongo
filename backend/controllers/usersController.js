@@ -33,6 +33,7 @@ const registerUser = asyncHandler(async (req, res) => {
       name: user.name,
     });
   } else {
+    res.status(400);
     throw new Error("INVALID USER");
   }
 });
