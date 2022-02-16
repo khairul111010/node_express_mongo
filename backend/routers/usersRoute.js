@@ -6,9 +6,10 @@ const {
   getUser,
 } = require("../controllers/usersController");
 
-router.route("/register").get(registerUser);
-router.route("/login").get(loginUser);
-router.route("/datauser").get(getUser);
-// router.route("/:id").put(putGoals).delete(deleteGoals);
+const { protect } = require("../middleware/authMiddleware");
+
+router.post("/register", registerUser);
+router.post("/login", loginUser);
+router.post("/datauser", getUser);
 
 module.exports = router;
