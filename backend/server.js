@@ -17,3 +17,5 @@ app.use(errorHandler); //ERROR HANDLER MIDDLEWARE
 app.listen(port, () => {
   console.log(`listening to ${port}`);
 });
+
+// npm start --host [ipv4]
